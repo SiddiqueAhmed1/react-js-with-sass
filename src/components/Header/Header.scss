@@ -1,0 +1,39 @@
+.header {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  .header-left {
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 100px;
+
+      li {
+
+        a {
+          transition: 0.4s ease-in-out;
+          font-weight: 600;
+          padding: 10px 20px;
+          
+         
+        }
+        .active {
+          background-color: var(--primary-color);
+          padding: 10px 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+
+    .container{
+        width: 1200px;
+
+       .info{
+        text-align: center;
+
+        img{
+            width: 100%;
+        }
+       }
+    }
+    }

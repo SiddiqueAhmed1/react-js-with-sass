@@ -1,0 +1,37 @@
+.dashboard {
+  padding: 50px 250px;
+  display: flex;
+  justify-content: space-between;
+
+  .dashboard-left {
+    width: 500px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      background-color: green;
+      display: inline-block;
+      
+
+      li {
+        width: 100%;
+        background-color: green;
+        color: white;
+
+        a {
+            padding: 10px;
+            display: block; /* Ensures the Link (a tag) spans the full width */
+            text-decoration: none;
+            color: white;
+        
+        .active {
+          background-color: yellow;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .dashboard-right {
+    width: 500px;
+  }
+}
