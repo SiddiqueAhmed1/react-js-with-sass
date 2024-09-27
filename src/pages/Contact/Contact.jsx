@@ -3,13 +3,18 @@ import Helmets from "../../components/Helmet/Helmets";
 import "./Contact.scss";
 
 const Contact = () => {
-  const [input, setInput] = useState([
-    {
-      name: "",
-      email: "",
-      pass: "",
-    },
-  ]);
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    pass: "",
+  });
+
+  const handleInput = (e) => {
+    setInput((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <>
@@ -23,28 +28,22 @@ const Contact = () => {
                 type="text"
                 placeholder="Name"
                 value={input.name}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  name: e.target.value,
-                }))}
+                name="name"
+                onChange={handleInput}
               />
               <input
                 type="text"
                 placeholder="Email"
                 value={input.email}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  email: e.target.value
-                }))}
+                name="email"
+                onChange={handleInput}
               />
               <input
                 type="text"
                 placeholder="Password"
                 value={input.pass}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  pass: e.target.value
-                }))}
+                name="pass"
+                onChange={handleInput}
               />
               <button>Submit Now</button>
             </form>

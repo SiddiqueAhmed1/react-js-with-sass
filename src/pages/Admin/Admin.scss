@@ -9,7 +9,6 @@
     ul {
       display: flex;
       flex-direction: column;
-      background-color: green;
       width: 300px;
       border-top: 1px solid rgb(0, 0, 0);
       border-bottom: 1px solid red;
@@ -20,7 +19,7 @@
 
       li {
         width: 100%;
-        background-color: green;
+        background-color: rgb(138, 10, 121);
 
         a {
             padding: 20px 15px;
