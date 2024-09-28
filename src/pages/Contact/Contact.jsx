@@ -1,15 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Helmets from "../../components/Helmet/Helmets";
 import "./Contact.scss";
 
 const Contact = () => {
-  const [input, setInput] = useState([
-    {
-      name: "",
-      email: "",
-      pass: "",
-    },
-  ]);
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    pass: "",
+    food: "",
+    gender: "",
+  });
+
+  const handleInput = (e) => {
+    setInput((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <>
@@ -22,30 +29,52 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="Name"
+                name="name"
                 value={input.name}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  name: e.target.value,
-                }))}
+                onChange={handleInput}
               />
               <input
                 type="text"
                 placeholder="Email"
                 value={input.email}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  email: e.target.value
-                }))}
+                name="email"
+                onChange={handleInput}
               />
               <input
                 type="text"
                 placeholder="Password"
                 value={input.pass}
-                onChange={(e) => setInput((prevState) => ({
-                  ...prevState,
-                  pass: e.target.value
-                }))}
+                name="pass"
+                onChange={handleInput}
               />
+              <select name="food" value={input.food} onChange={handleInput}>
+                <option value="">--Select</option>
+                <option value="Mango">Mango</option>
+                <option value="Apple">Apple</option>
+                <option value="Lemon">Lemon</option>
+              </select>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    onChange={handleInput}
+                  />
+                  Male
+                </label>{" "}
+                &nbsp;
+                <label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    onChange={handleInput}
+                  />
+                  Female
+                </label>
+              </div>
+
               <button>Submit Now</button>
             </form>
           </div>
