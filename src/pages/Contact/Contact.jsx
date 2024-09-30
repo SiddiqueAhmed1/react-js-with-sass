@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Helmets from "../../components/Helmet/Helmets";
 import "./Contact.scss";
 
@@ -7,11 +7,8 @@ const Contact = () => {
     name: "",
     email: "",
     pass: "",
-<<<<<<< HEAD
     food: "",
     gender: "",
-=======
->>>>>>> 1b76af5e60ca43a39348df5abdad7e1f2c4b1ce9
   });
 
   const handleInput = (e) => {
@@ -34,10 +31,6 @@ const Contact = () => {
                 placeholder="Name"
                 name="name"
                 value={input.name}
-<<<<<<< HEAD
-=======
-                name="name"
->>>>>>> 1b76af5e60ca43a39348df5abdad7e1f2c4b1ce9
                 onChange={handleInput}
               />
               <input
