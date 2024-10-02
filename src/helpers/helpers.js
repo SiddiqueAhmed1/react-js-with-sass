@@ -1,12 +1,7 @@
 const routeCheck = (path, route) => {
-    const pathArr = path.split('/')
+  const pathArr = path.split("/");
 
-
-    
-    
-  return  pathArr.includes(route)
-
-}
-
+  return pathArr.includes(route);
+};
 
 export default routeCheck;

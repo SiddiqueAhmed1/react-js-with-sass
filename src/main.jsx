@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.scss";
+import 'react-toastify/dist/ReactToastify.css';
 import CounterProvider from "./Provider/CounterProvider.jsx";
 import MsgProvider from "./Provider/MsgProvider.jsx";
 
